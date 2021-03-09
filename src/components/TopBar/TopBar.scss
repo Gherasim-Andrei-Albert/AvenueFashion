@@ -35,7 +35,7 @@
   }
 }
 
-.TopBar__cart {
+.TopBar__cart_btn {
   margin-left: 5px;
   margin-right: auto;
   height: 100%;
@@ -45,11 +45,11 @@
   padding: 0 5px;
 }
 
-.cart__icon {
+.cart_btn__icon {
   margin-right: 5px;
 }
 
-.cart__arrow {
+.car_btn__arrow {
   margin-left: 5px;
 }
 
@@ -59,16 +59,16 @@
     margin-left: 10px;
   }
 
-  .TopBar__cart {
+  .TopBar__cart_btn {
     margin-left: 10px;
     padding: 0 10px;
   }
 
-  .cart__icon {
+  .cart_btn__icon {
     margin-right: 10px;
   }
 
-  .cart__arrow {
+  .cart_btn__arrow {
     margin-left: 10px;
   }
 }
@@ -82,16 +82,16 @@
     margin-left: 20px;
   }
 
-  .TopBar__cart {
+  .TopBar__cart_btn {
     margin-left: 40px;
     padding: 0 24px;
   }
 
-  .cart__icon {
+  .cart_btn__icon {
     margin-right: 24px;
   }
 
-  .cart__arrow {
+  .cart_btn__arrow {
     margin-left: 10px;
   }
 }

@@ -20,9 +20,9 @@ const TopBar: React.FC = () => (
     <Link className="TopBar__register" to="/register">
       Register
     </Link>
-    <button className="TopBar__cart">
-      <i className="cart__icon fas fa-shopping-cart"></i>empty
-      <i className="cart__arrow fas fa-chevron-down"></i>
+    <button className="TopBar__cart_btn">
+      <i className="cart_btn__icon fas fa-shopping-cart"></i>empty
+      <i className="cart_btn__arrow fas fa-chevron-down"></i>
     </button>
   </div>
 );
