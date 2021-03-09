@@ -1,0 +1,43 @@
+.Dropdown {
+  display: inline;
+  position: relative;
+  cursor: default;
+  user-select: none;
+}
+
+.real_select {
+  display: none;
+}
+
+.Dropdown__options {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-sizing: border-box;
+  min-width: 100%;
+}
+
+.Dropdown__options--active {
+  display: unset;
+}
+
+.Dropdown__option {
+  &:hover {
+    background-color: grey;
+    color: white;
+  }
+  &--active {
+    background-color: black;
+    color: white;
+  }
+}
+
+.Dropdown__arrow {
+  margin-left: 6px;
+}

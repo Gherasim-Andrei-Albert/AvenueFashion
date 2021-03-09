@@ -1,0 +1,97 @@
+@import '../../colors.scss';
+
+.TopBar {
+  background-color: map-get($map: $colors, $key: 'background');
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  height: 46px;
+}
+
+.TopBar__currency_label {
+  margin-left: auto;
+}
+
+.TopBar__currency {
+  margin-left: 4px;
+  margin-right: auto;
+  &:hover .Dropdown__value {
+    color: map-get($map: $colors, $key: 'primary');
+  }
+}
+
+.TopBar__currency,
+.TopBar__currency_label {
+  color: #777777;
+}
+
+.TopBar__sign_in,
+.TopBar__register {
+  color: #999999;
+  text-decoration: none;
+  margin-left: 5px;
+  &:hover {
+    color: map-get($map: $colors, $key: 'primary');
+  }
+}
+
+.TopBar__cart {
+  margin-left: 5px;
+  margin-right: auto;
+  height: 100%;
+  background-color: map-get($map: $colors, $key: 'primary');
+  border: 0;
+  color: white;
+  padding: 0 5px;
+}
+
+.cart__icon {
+  margin-right: 5px;
+}
+
+.cart__arrow {
+  margin-left: 5px;
+}
+
+@media (min-width: 372px) {
+  .TopBar__sign_in,
+  .TopBar__register {
+    margin-left: 10px;
+  }
+
+  .TopBar__cart {
+    margin-left: 10px;
+    padding: 0 10px;
+  }
+
+  .cart__icon {
+    margin-right: 10px;
+  }
+
+  .cart__arrow {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 500px) {
+  .TopBar__sign_in {
+    margin-left: auto;
+  }
+
+  .TopBar__register {
+    margin-left: 20px;
+  }
+
+  .TopBar__cart {
+    margin-left: 40px;
+    padding: 0 24px;
+  }
+
+  .cart__icon {
+    margin-right: 24px;
+  }
+
+  .cart__arrow {
+    margin-left: 10px;
+  }
+}
