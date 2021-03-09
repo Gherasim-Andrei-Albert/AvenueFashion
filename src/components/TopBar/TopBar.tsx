@@ -8,7 +8,11 @@ const TopBar: React.FC = () => (
     <label className="TopBar__currency_label" htmlFor="currency">
       Currency :
     </label>
-    <Dropdown className="TopBar__currency" currencies={['GBP', 'EUR', 'USD']} />
+    <Dropdown
+      className="TopBar__currency"
+      values={['GBP', 'EUR', 'USD']}
+      defaultValue="GBP"
+    />
     <Link className="TopBar__sign_in" to="/register">
       Sign In
     </Link>

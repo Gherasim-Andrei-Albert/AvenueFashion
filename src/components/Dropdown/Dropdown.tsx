@@ -2,11 +2,15 @@ import { allowedNodeEnvironmentFlags } from 'process';
 import React, { useState, useEffect } from 'react';
 import './Dropdown.scss';
 
-const Dropdown: React.FC<{ className: string; currencies: string[] }> = (
-  props
-) => {
+interface DropdownProps {
+  className: string;
+  values: string[];
+  defaultValue: string;
+}
+
+const Dropdown: React.FC<DropdownProps> = (props) => {
   const [isActive, setActive] = useState(false);
-  const [value, setValue] = useState(props.currencies[0]);
+  const [value, setValue] = useState(props.defaultValue);
 
   const realSelectRef = React.createRef<HTMLSelectElement>();
 
@@ -48,23 +52,23 @@ const Dropdown: React.FC<{ className: string; currencies: string[] }> = (
           isActive ? ' Dropdown__options--active' : ''
         }`}
       >
-        {props.currencies.map((currency) => (
+        {props.values.map((item) => (
           <li
             className={`Dropdown__option${
-              currency === value ? ' Dropdown__option--active' : ''
+              item === value ? ' Dropdown__option--active' : ''
             }`}
-            key={currency}
+            key={item}
             onClick={() => {
-              setValue(currency);
+              setValue(item);
             }}
           >
-            {currency}
+            {item}
           </li>
         ))}
       </ul>
 
       <select ref={realSelectRef} className="real_select" name="currency">
-        {props.currencies.map((currency) => (
+        {props.values.map((currency) => (
           <option key={currency} value={currency}>
             {currency}
           </option>
