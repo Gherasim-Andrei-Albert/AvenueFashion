@@ -10,6 +10,7 @@ const TopBar: React.FC = () => (
     </label>
     <Dropdown
       className="TopBar__currency"
+      name="currency"
       values={['GBP', 'EUR', 'USD']}
       defaultValue="GBP"
     />

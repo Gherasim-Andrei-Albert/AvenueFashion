@@ -1,9 +1,9 @@
-import { allowedNodeEnvironmentFlags } from 'process';
 import React, { useState, useEffect } from 'react';
 import './Dropdown.scss';
 
 interface DropdownProps {
   className: string;
+  name: string;
   values: string[];
   defaultValue: string;
 }
@@ -29,7 +29,7 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
   useEffect(() => {
     const realSelect = realSelectRef.current;
     if (realSelect) realSelect.value = value;
-  }, [value]);
+  }, [value, realSelectRef]);
 
   return (
     <div
@@ -52,25 +52,25 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
           isActive ? ' Dropdown__options--active' : ''
         }`}
       >
-        {props.values.map((item) => (
+        {props.values.map((dropdownItem) => (
           <li
             className={`Dropdown__option${
-              item === value ? ' Dropdown__option--active' : ''
+              dropdownItem === value ? ' Dropdown__option--active' : ''
             }`}
-            key={item}
+            key={dropdownItem}
             onClick={() => {
-              setValue(item);
+              setValue(dropdownItem);
             }}
           >
-            {item}
+            {dropdownItem}
           </li>
         ))}
       </ul>
 
-      <select ref={realSelectRef} className="real_select" name="currency">
-        {props.values.map((currency) => (
-          <option key={currency} value={currency}>
-            {currency}
+      <select ref={realSelectRef} className="real_select" name={props.name}>
+        {props.values.map((dropdownItem) => (
+          <option key={dropdownItem} value={dropdownItem}>
+            {dropdownItem}
           </option>
         ))}
       </select>
