@@ -1,0 +1,124 @@
+@import '../../colors.scss';
+
+.Navbar {
+  position: relative;
+  background-color: white;
+}
+
+.Navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  font-weight: normal;
+}
+
+.header__link {
+  font-size: 24px;
+  color: #222222;
+  text-decoration: none;
+  &:hover {
+    color: map-get($map: $colors, $key: 'primary');
+    text-decoration: none;
+  }
+}
+
+.header__decoration {
+  font-weight: bold;
+}
+
+.Navbar__bars_icon {
+  cursor: pointer;
+  &:hover {
+    color: map-get($map: $colors, $key: 'primary');
+  }
+}
+
+.Navbar__menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: map-get($map: $colors, $key: 'background_light');
+}
+
+.Navbar__menu--active {
+  display: block;
+}
+
+.Navbar__link {
+  font-size: 13px;
+  color: #222222;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  &:hover {
+    color: map-get($map: $colors, $key: 'primary');
+    text-decoration: none;
+  }
+}
+
+.SubNavDropdown .NavDropdown__toggler {
+  font-size: 12px;
+  color: #575153;
+  &:hover {
+    color: map-get($map: $colors, $key: 'primary');
+  }
+}
+
+.NavDropdown__link {
+  font-size: 14px;
+  color: #727272;
+  text-decoration: none;
+  margin: 4px 0;
+  &:hover {
+    color: map-get($map: $colors, $key: 'primary');
+    text-decoration: none;
+  }
+}
+
+.NavDropdown__banner {
+  background-color: map-get($map: $colors, $key: 'background');
+  max-width: 400px;
+  height: 150px;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.Navbar__search {
+  max-width: 190px;
+  margin: 10px 0;
+  background-color: transparent;
+  border: 2px solid grey;
+  color: #989898;
+  font-size: 13px;
+  padding: 7px 0 7px 10px;
+  &::placeholder {
+    color: #989898;
+  }
+}
+
+.Navbar__search_wraper {
+  position: relative;
+  max-width: 190px;
+}
+
+.Navbar__search_icon {
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 15px;
+  color: #989898;
+}
+
+@media (min-width: 400px) {
+  .NavDropdown__banner {
+    height: 200px;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../colors.scss';
+
+.NavDropdown {
+  position: relative;
+  margin-bottom: 10px;
+  &:first-child {
+    margin-top: 10px;
+  }
+}
+
+.NavDropdown__menu {
+  display: none;
+  padding-left: 10px;
+}
+
+.NavDropdown__menu--active {
+  display: flex;
+  flex-direction: column;
+}
+
+.NavDropdown__toggler {
+  cursor: pointer;
+  font-size: 13px;
+  color: #222222;
+  &:hover {
+    color: map-get($map: $colors, $key: 'primary');
+  }
+}
