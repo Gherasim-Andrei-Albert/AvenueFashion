@@ -16,7 +16,7 @@
 .TopBar__currency {
   margin-left: 4px;
   margin-right: auto;
-  &:hover .Dropdown__value {
+  &:hover .Select__value {
     color: map-get($map: $colors, $key: 'primary');
   }
 }

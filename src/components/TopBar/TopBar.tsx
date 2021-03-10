@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Dropdown from '../Dropdown/Dropdown';
+import Select from '../Select/Select';
 import './TopBar.scss';
 
 const TopBar: React.FC = () => (
@@ -8,7 +8,7 @@ const TopBar: React.FC = () => (
     <label className="TopBar__currency_label" htmlFor="currency">
       Currency :
     </label>
-    <Dropdown
+    <Select
       className="TopBar__currency"
       name="currency"
       values={['GBP', 'EUR', 'USD']}

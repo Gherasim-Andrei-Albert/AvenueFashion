@@ -1,4 +1,4 @@
-.Dropdown {
+.Select {
   display: inline;
   position: relative;
   cursor: default;
@@ -9,7 +9,7 @@
   display: none;
 }
 
-.Dropdown__options {
+.Select__options {
   display: none;
   list-style-type: none;
   padding: 0;
@@ -23,11 +23,11 @@
   min-width: 100%;
 }
 
-.Dropdown__options--active {
+.Select__options--active {
   display: unset;
 }
 
-.Dropdown__option {
+.Select__option {
   &:hover {
     background-color: grey;
     color: white;
@@ -38,6 +38,6 @@
   }
 }
 
-.Dropdown__arrow {
+.Select__arrow {
   margin-left: 6px;
 }

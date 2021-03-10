@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import './Dropdown.scss';
+import './Select.scss';
 
-interface DropdownProps {
+interface SelectProps {
   className: string;
   name: string;
   values: string[];
   defaultValue: string;
 }
 
-const Dropdown: React.FC<DropdownProps> = (props) => {
+const Select: React.FC<SelectProps> = (props) => {
   const [isActive, setActive] = useState(false);
   const [value, setValue] = useState(props.defaultValue);
 
@@ -18,8 +18,8 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
       if (
-        !target.className.includes('Dropdown__value') &&
-        !target.className.includes('Dropdown__arrow')
+        !target.className.includes('Select__value') &&
+        !target.className.includes('Select__arrow')
       ) {
         setActive(false);
       }
@@ -33,44 +33,44 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
 
   return (
     <div
-      className={`Dropdown${isActive ? ' Dropdown--active' : ''} ${
+      className={`Select${isActive ? ' Select--active' : ''} ${
         props.className
       }`}
     >
       <span
-        className="Dropdown__value"
+        className="Select__value"
         onClick={() => {
           setActive((isActive) => !isActive);
         }}
       >
         {value}
-        <i className="Dropdown__arrow fas fa-chevron-down"></i>
+        <i className="Select__arrow fas fa-chevron-down"></i>
       </span>
 
       <ul
-        className={`Dropdown__options${
-          isActive ? ' Dropdown__options--active' : ''
+        className={`Select__options${
+          isActive ? ' Select__options--active' : ''
         }`}
       >
-        {props.values.map((dropdownItem) => (
+        {props.values.map((selectOption) => (
           <li
-            className={`Dropdown__option${
-              dropdownItem === value ? ' Dropdown__option--active' : ''
+            className={`Select__option${
+              selectOption === value ? ' Select__option--active' : ''
             }`}
-            key={dropdownItem}
+            key={selectOption}
             onClick={() => {
-              setValue(dropdownItem);
+              setValue(selectOption);
             }}
           >
-            {dropdownItem}
+            {selectOption}
           </li>
         ))}
       </ul>
 
       <select ref={realSelectRef} className="real_select" name={props.name}>
-        {props.values.map((dropdownItem) => (
-          <option key={dropdownItem} value={dropdownItem}>
-            {dropdownItem}
+        {props.values.map((selectOption) => (
+          <option key={selectOption} value={selectOption}>
+            {selectOption}
           </option>
         ))}
       </select>
@@ -78,4 +78,4 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
   );
 };
 
-export default Dropdown;
+export default Select;
