@@ -42,6 +42,7 @@
   top: 100%;
   left: 0;
   right: 0;
+  overflow: hidden;
   background-color: map-get($map: $colors, $key: 'background_light');
 }
 
