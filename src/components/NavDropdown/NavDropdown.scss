@@ -9,13 +9,14 @@
 }
 
 .NavDropdown__menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   padding-left: 10px;
+  overflow: hidden;
 }
 
 .NavDropdown__menu--active {
-  display: flex;
-  flex-direction: column;
 }
 
 .NavDropdown__toggler {

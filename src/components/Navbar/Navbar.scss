@@ -47,7 +47,7 @@
 }
 
 .Navbar__menu--active {
-  display: block;
+  //display: block;
 }
 
 .Navbar__link {
@@ -81,7 +81,7 @@
   }
 }
 
-.NavDropdown__banner {
+.banner__container {
   background-color: map-get($map: $colors, $key: 'background');
   max-width: 400px;
   height: 150px;
@@ -119,7 +119,7 @@
 }
 
 @media (min-width: 400px) {
-  .NavDropdown__banner {
+  .banner__container {
     height: 200px;
   }
 }
