@@ -42,10 +42,6 @@
 
 .Navbar__menu {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
   overflow: hidden;
   background-color: map-get($map: $colors, $key: 'background_light');
 }
