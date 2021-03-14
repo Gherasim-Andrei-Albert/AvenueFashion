@@ -180,7 +180,7 @@
   .menu__container > .NavDropdown:hover > .NavDropdown__menu {
     display: grid;
     position: absolute;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 185px);
     grid-column-gap: 30px;
     grid-row-gap: 60px;
     background-color: #f8f8f8;
