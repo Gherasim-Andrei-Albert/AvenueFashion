@@ -32,7 +32,7 @@ const NavDropdown = React.forwardRef<HTMLDivElement, NavDropdownProps>(
     useEffect(() => {
       let old: number | null = window.innerWidth;
       window.addEventListener('resize', () => {
-        console.log('*resize*', window.innerWidth, old);
+        //console.log('*resize*', window.innerWidth, old);
         setScreenWidth({
           current: window.innerWidth,
           old,
@@ -42,10 +42,10 @@ const NavDropdown = React.forwardRef<HTMLDivElement, NavDropdownProps>(
     }, []);
 
     useEffect(() => {
-      console.log('[dropdown] computing effect');
+      //console.log('[dropdown] computing effect');
       if (screenWidth.current < 768) {
         if (!wasHeightComputed) {
-          console.log('[dropdown] computing');
+          //console.log('[dropdown] computing');
           if (menuRef != null) {
             const menu = menuRef.current;
             if (menu) {
