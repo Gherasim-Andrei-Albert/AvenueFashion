@@ -164,7 +164,7 @@ const ProductsSection: React.FC = () => {
             }
           }}
           infinite
-          autoPlay={false}
+          autoPlay={!hover}
           showDots={false}
           arrows={false}
           responsive={{
