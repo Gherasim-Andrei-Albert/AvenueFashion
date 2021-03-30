@@ -1,10 +1,10 @@
 import React from 'react';
-import HeaderSlider from '../HeaderSlider/HeaderSlider';
+import HeaderCarousel from '../HeaderCarousel/HeaderCarousel';
 import './Home.scss';
 
 const Home: React.FC = () => (
   <div className="Home">
-    <HeaderSlider />
+    <HeaderCarousel />
   </div>
 );
 

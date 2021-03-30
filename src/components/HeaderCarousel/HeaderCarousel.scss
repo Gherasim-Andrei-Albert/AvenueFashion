@@ -1,18 +1,29 @@
 @import '../../colors.scss';
 
-.HeaderSlider {
+.HeaderCarousel__wraper {
   background-color: map-get($map: $colors, $key: 'background_light');
-}
-
-.carousel .slide {
-  background-color: transparent;
-}
-
-.HeaderSlider__slide {
+  padding-top: 44%;
   position: relative;
 }
 
-.HeaderSlider__button {
+.HeaderCarousel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  .react-multi-carousel-track {
+    height: 100%;
+  }
+}
+
+.HeaderCarousel__img {
+  width: 100%;
+  height: 100%;
+}
+
+.HeaderCarousel__button {
   position: absolute;
   right: 5%;
   bottom: 5%;
@@ -33,14 +44,14 @@
 }
 
 @media (min-width: 576px) {
-  .HeaderSlider__button {
+  .HeaderCarousel__button {
     font-size: 16px;
     bottom: 10%;
   }
 }
 
 @media (min-width: 992px) {
-  .HeaderSlider__button {
+  .HeaderCarousel__button {
     padding: 20px 30px;
     right: 15%;
     bottom: 10%;
