@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom';
-import './Products.scss';
+import './ProductsSection.scss';
 
-const Products: React.FC = () => {
+const ProductsSection: React.FC = () => {
   const filters = [
     'POPULAR',
     'NEW ARRIVALS',
@@ -318,4 +318,4 @@ const Products: React.FC = () => {
   );
 };
 
-export default Products;
+export default ProductsSection;
