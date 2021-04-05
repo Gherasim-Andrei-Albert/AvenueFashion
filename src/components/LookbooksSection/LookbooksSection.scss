@@ -6,6 +6,7 @@
 
 .lookbook_card {
   position: relative;
+  z-index: 0;
   background-color: map-get($map: $colors, $key: 'background_light');
   text-align: right;
   padding: 20px 20px 20px 0;
