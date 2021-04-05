@@ -84,10 +84,18 @@ const Footer: React.FC = () => (
         AWARD WINNER <br /> FASHION AWARDS 2016
       </div>
       <div className="Footer__banner Footer__social">
-        <i className="Footer__social_icon fab fa-facebook-f"></i>
-        <i className="Footer__social_icon fab fa-twitter"></i>
-        <i className="Footer__social_icon fab fa-instagram"></i>
-        <i className="Footer__social_icon fab fa-pinterest-p"></i>
+        <a className="Footer__social_icon" href="">
+          <i className="fab fa-facebook-f"></i>
+        </a>
+        <a className="Footer__social_icon" href="">
+          <i className="fab fa-twitter"></i>
+        </a>
+        <a className="Footer__social_icon" href="">
+          <i className="fab fa-instagram"></i>
+        </a>
+        <a className="Footer__social_icon" href="">
+          <i className="fab fa-pinterest-p"></i>
+        </a>
       </div>
     </Container>
     <div className="Footer__copyright">

@@ -31,6 +31,15 @@
   background-color: map-get($map: $colors, $key: 'primary');
 }
 
+.Footer__social_icon {
+  &,
+  &:hover,
+  &:active,
+  &:visited {
+    color: white;
+  }
+}
+
 .Footer__social_icon:not(:last-child) {
   margin-right: 30px;
 }
