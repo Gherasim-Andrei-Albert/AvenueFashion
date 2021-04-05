@@ -3,16 +3,13 @@
 .Navbar {
   position: relative;
   background-color: white;
+  padding: 0 20px;
 }
 
 .Navbar__header_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.Navbar__container {
-  margin: 0;
 }
 
 .header {
@@ -125,15 +122,25 @@
 }
 
 @media (min-width: 576px) {
-  .Navbar__container {
-    margin: 0 auto;
+  .Navbar__header_container {
+    margin: auto;
+    width: 510px;
+  }
+  .menu__container {
+    margin: auto;
     width: 510px;
   }
 }
 
 @media (min-width: 768px) {
-  .Navbar__container {
-    position: relative;
+  .Navbar {
+    padding: 0;
+    width: 690px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .Navbar__menu {
     width: 690px;
     margin-top: 30px;
   }
@@ -141,11 +148,6 @@
     position: absolute;
     top: 0;
     right: 0;
-  }
-  .Navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
   .Navbar__menu {
     position: static;
@@ -213,20 +215,22 @@
 }
 
 @media (min-width: 992px) {
-  .Navbar__container {
+  .Navbar {
     width: 930px;
   }
 }
 
 @media (min-width: 1200px) {
-  .Navbar__container {
+  .Navbar {
     width: 1110px;
   }
 }
 
 @media (min-width: 1400px) {
-  .Navbar__container {
+  .Navbar {
     width: 1290px;
+    flex-direction: row;
+    align-items: center;
   }
   .Navbar__search_wraper {
     position: relative;
@@ -239,13 +243,10 @@
   .Navbar__menu {
     width: 50%;
     margin-left: auto;
+    margin-top: 0;
   }
   .menu__container :not(:first-child) {
     margin-right: 20px;
     margin-bottom: 0;
-  }
-  .Navbar__container {
-    display: flex;
-    align-items: center;
   }
 }

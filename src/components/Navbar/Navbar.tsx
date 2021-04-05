@@ -1,6 +1,5 @@
 import React, { useState, useEffect, RefObject, createRef } from 'react';
 import { Link } from 'react-router-dom';
-import Container from '../Container/Container';
 import NavDropdown from '../NavDropdown/NavDropdown';
 import './Navbar.scss';
 
@@ -119,168 +118,166 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="Navbar">
-      <Container className="Navbar__container">
-        <Container className="Navbar__header_container">
-          <h1 className="header">
-            <Link className="header__link" to="/">
-              <span className="header__decoration">AVENUE</span> FASHION
-            </Link>
-          </h1>
-          <i
-            className="Navbar__bars_icon fas fa-bars"
-            onClick={() => {
-              if (screenWidth.current < 768) setActive((isActive) => !isActive);
-            }}
-          ></i>
-        </Container>
-        <div
-          className={`Navbar__menu${isActive ? ' Navbar__menu--active' : ''}`}
-          ref={menuRef}
-        >
-          <Container className="menu__container">
-            <div className="Navbar__search_wraper">
-              <input
-                className="Navbar__search"
-                type="text"
-                placeholder="Search.."
-              />
-              <i className="Navbar__search_icon fas fa-search"></i>
+      <div className="Navbar__header_container">
+        <h1 className="header">
+          <Link className="header__link" to="/">
+            <span className="header__decoration">AVENUE</span> FASHION
+          </Link>
+        </h1>
+        <i
+          className="Navbar__bars_icon fas fa-bars"
+          onClick={() => {
+            if (screenWidth.current < 768) setActive((isActive) => !isActive);
+          }}
+        ></i>
+      </div>
+      <div
+        className={`Navbar__menu${isActive ? ' Navbar__menu--active' : ''}`}
+        ref={menuRef}
+      >
+        <div className="menu__container">
+          <div className="Navbar__search_wraper">
+            <input
+              className="Navbar__search"
+              type="text"
+              placeholder="Search.."
+            />
+            <i className="Navbar__search_icon fas fa-search"></i>
+          </div>
+          <NavDropdown
+            toggler="MENS"
+            ref={dropdownsRefs[0].parentRef}
+            navMenuRef={menuRef}
+            subDropdownsRefs={dropdownsRefs[0].subDropdownsRefs}
+          >
+            <NavDropdown
+              className="SubNavDropdown"
+              toggler="CASUALS"
+              ref={dropdownsRefs[0].subDropdownsRefs[0]}
+              navMenuRef={menuRef}
+            >
+              {[
+                'Jackets',
+                'Hoodies & Sweatshirts',
+                'Polo Shirts',
+                'Sportswear',
+                'Trousers & Chinos',
+                'T-Shirts',
+              ].map((item) => (
+                <Link className="NavDropdown__link" key={item} to="">
+                  {item}
+                </Link>
+              ))}
+            </NavDropdown>
+            <NavDropdown
+              className="SubNavDropdown"
+              toggler="FORMAL"
+              ref={dropdownsRefs[0].subDropdownsRefs[1]}
+              navMenuRef={menuRef}
+            >
+              {['Jackets', 'Shirts', 'Suits', 'Trousers'].map((item) => (
+                <Link className="NavDropdown__link" key={item} to="">
+                  {item}
+                </Link>
+              ))}
+            </NavDropdown>
+            <div className="NavDropdown__banner">
+              <div className="banner__container">
+                <b>AUTUMN SALE!</b>
+                UP TO 50% OFF
+              </div>
             </div>
+          </NavDropdown>
+          <NavDropdown
+            toggler="WOMENS"
+            ref={dropdownsRefs[1].parentRef}
+            navMenuRef={menuRef}
+            subDropdownsRefs={dropdownsRefs[1].subDropdownsRefs}
+          >
             <NavDropdown
-              toggler="MENS"
-              ref={dropdownsRefs[0].parentRef}
+              className="SubNavDropdown"
+              toggler="CASUALS"
+              ref={dropdownsRefs[1].subDropdownsRefs[0]}
               navMenuRef={menuRef}
-              subDropdownsRefs={dropdownsRefs[0].subDropdownsRefs}
             >
-              <NavDropdown
-                className="SubNavDropdown"
-                toggler="CASUALS"
-                ref={dropdownsRefs[0].subDropdownsRefs[0]}
-                navMenuRef={menuRef}
-              >
-                {[
-                  'Jackets',
-                  'Hoodies & Sweatshirts',
-                  'Polo Shirts',
-                  'Sportswear',
-                  'Trousers & Chinos',
-                  'T-Shirts',
-                ].map((item) => (
-                  <Link className="NavDropdown__link" key={item} to="">
-                    {item}
-                  </Link>
-                ))}
-              </NavDropdown>
-              <NavDropdown
-                className="SubNavDropdown"
-                toggler="FORMAL"
-                ref={dropdownsRefs[0].subDropdownsRefs[1]}
-                navMenuRef={menuRef}
-              >
-                {['Jackets', 'Shirts', 'Suits', 'Trousers'].map((item) => (
-                  <Link className="NavDropdown__link" key={item} to="">
-                    {item}
-                  </Link>
-                ))}
-              </NavDropdown>
-              <div className="NavDropdown__banner">
-                <div className="banner__container">
-                  <b>AUTUMN SALE!</b>
-                  UP TO 50% OFF
-                </div>
-              </div>
+              {[
+                'Jackets',
+                'Hoodies & Sweatshirts',
+                'Polo Shirts',
+                'Sportswear',
+                'Trousers & Chinos',
+                'T-Shirts',
+              ].map((item) => (
+                <Link className="NavDropdown__link" key={item} to="">
+                  {item}
+                </Link>
+              ))}
             </NavDropdown>
             <NavDropdown
-              toggler="WOMENS"
-              ref={dropdownsRefs[1].parentRef}
+              className="SubNavDropdown"
+              toggler="FORMAL"
+              ref={dropdownsRefs[1].subDropdownsRefs[1]}
               navMenuRef={menuRef}
-              subDropdownsRefs={dropdownsRefs[1].subDropdownsRefs}
             >
-              <NavDropdown
-                className="SubNavDropdown"
-                toggler="CASUALS"
-                ref={dropdownsRefs[1].subDropdownsRefs[0]}
-                navMenuRef={menuRef}
-              >
-                {[
-                  'Jackets',
-                  'Hoodies & Sweatshirts',
-                  'Polo Shirts',
-                  'Sportswear',
-                  'Trousers & Chinos',
-                  'T-Shirts',
-                ].map((item) => (
-                  <Link className="NavDropdown__link" key={item} to="">
-                    {item}
-                  </Link>
-                ))}
-              </NavDropdown>
-              <NavDropdown
-                className="SubNavDropdown"
-                toggler="FORMAL"
-                ref={dropdownsRefs[1].subDropdownsRefs[1]}
-                navMenuRef={menuRef}
-              >
-                {['Jackets', 'Shirts', 'Suits', 'Trousers'].map((item) => (
-                  <Link className="NavDropdown__link" key={item} to="">
-                    {item}
-                  </Link>
-                ))}
-              </NavDropdown>
-              <div className="NavDropdown__banner">
-                <div className="banner__container">
-                  <b>AUTUMN SALE!</b>
-                  UP TO 50% OFF
-                </div>
-              </div>
+              {['Jackets', 'Shirts', 'Suits', 'Trousers'].map((item) => (
+                <Link className="NavDropdown__link" key={item} to="">
+                  {item}
+                </Link>
+              ))}
             </NavDropdown>
-            <Link className="Navbar__link" to="/brand">
-              THE BRAND
-            </Link>
+            <div className="NavDropdown__banner">
+              <div className="banner__container">
+                <b>AUTUMN SALE!</b>
+                UP TO 50% OFF
+              </div>
+            </div>
+          </NavDropdown>
+          <Link className="Navbar__link" to="/brand">
+            THE BRAND
+          </Link>
+          <NavDropdown
+            toggler="LOCAL STORES"
+            ref={dropdownsRefs[2].parentRef}
+            navMenuRef={menuRef}
+            subDropdownsRefs={dropdownsRefs[2].subDropdownsRefs}
+          >
             <NavDropdown
-              toggler="LOCAL STORES"
-              ref={dropdownsRefs[2].parentRef}
+              className="SubNavDropdown"
+              toggler="OUR LOOKBOOKS"
+              ref={dropdownsRefs[2].subDropdownsRefs[0]}
               navMenuRef={menuRef}
-              subDropdownsRefs={dropdownsRefs[2].subDropdownsRefs}
             >
-              <NavDropdown
-                className="SubNavDropdown"
-                toggler="OUR LOOKBOOKS"
-                ref={dropdownsRefs[2].subDropdownsRefs[0]}
-                navMenuRef={menuRef}
-              >
-                {[
-                  'Latest Posts (mixed)',
-                  'Men’s Lookbook',
-                  'Women’s Lookbook',
-                ].map((item) => (
-                  <Link className="NavDropdown__link" key={item} to="">
-                    {item}
-                  </Link>
-                ))}
-              </NavDropdown>
-              <NavDropdown
-                className="SubNavDropdown"
-                toggler="YOUR LOOKBOOK"
-                ref={dropdownsRefs[2].subDropdownsRefs[1]}
-                navMenuRef={menuRef}
-              >
-                {['View and Edit', 'Share', 'Delete'].map((item) => (
-                  <Link className="NavDropdown__link" key={item} to="">
-                    {item}
-                  </Link>
-                ))}
-              </NavDropdown>
-              <div className="NavDropdown__banner">
-                <div className="banner__container">
-                  <b>AUTUMN SALE!</b>
-                  UP TO 50% OFF
-                </div>
-              </div>
+              {[
+                'Latest Posts (mixed)',
+                'Men’s Lookbook',
+                'Women’s Lookbook',
+              ].map((item) => (
+                <Link className="NavDropdown__link" key={item} to="">
+                  {item}
+                </Link>
+              ))}
             </NavDropdown>
-          </Container>
+            <NavDropdown
+              className="SubNavDropdown"
+              toggler="YOUR LOOKBOOK"
+              ref={dropdownsRefs[2].subDropdownsRefs[1]}
+              navMenuRef={menuRef}
+            >
+              {['View and Edit', 'Share', 'Delete'].map((item) => (
+                <Link className="NavDropdown__link" key={item} to="">
+                  {item}
+                </Link>
+              ))}
+            </NavDropdown>
+            <div className="NavDropdown__banner">
+              <div className="banner__container">
+                <b>AUTUMN SALE!</b>
+                UP TO 50% OFF
+              </div>
+            </div>
+          </NavDropdown>
         </div>
-      </Container>
+      </div>
     </nav>
   );
 };
