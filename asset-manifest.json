@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/AvenueFashion/static/css/main.0ea00328.chunk.css",
+    "main.js": "/AvenueFashion/static/js/main.1b3dcb85.chunk.js",
+    "main.js.map": "/AvenueFashion/static/js/main.1b3dcb85.chunk.js.map",
+    "runtime-main.js": "/AvenueFashion/static/js/runtime-main.7614d966.js",
+    "runtime-main.js.map": "/AvenueFashion/static/js/runtime-main.7614d966.js.map",
+    "static/css/2.8879f817.chunk.css": "/AvenueFashion/static/css/2.8879f817.chunk.css",
+    "static/js/2.4119e87b.chunk.js": "/AvenueFashion/static/js/2.4119e87b.chunk.js",
+    "static/js/2.4119e87b.chunk.js.map": "/AvenueFashion/static/js/2.4119e87b.chunk.js.map",
+    "static/js/3.ae8578bf.chunk.js": "/AvenueFashion/static/js/3.ae8578bf.chunk.js",
+    "static/js/3.ae8578bf.chunk.js.map": "/AvenueFashion/static/js/3.ae8578bf.chunk.js.map",
+    "index.html": "/AvenueFashion/index.html",
+    "static/css/2.8879f817.chunk.css.map": "/AvenueFashion/static/css/2.8879f817.chunk.css.map",
+    "static/css/main.0ea00328.chunk.css.map": "/AvenueFashion/static/css/main.0ea00328.chunk.css.map",
+    "static/js/2.4119e87b.chunk.js.LICENSE.txt": "/AvenueFashion/static/js/2.4119e87b.chunk.js.LICENSE.txt",
+    "static/media/Clip.06121807.png": "/AvenueFashion/static/media/Clip.06121807.png",
+    "static/media/REPLACE.817c18cc.png": "/AvenueFashion/static/media/REPLACE.817c18cc.png",
+    "static/media/photo silhouette.607dc744.png": "/AvenueFashion/static/media/photo silhouette.607dc744.png",
+    "static/media/styles.css": "/AvenueFashion/static/media/revicons.e8746a62.woff",
+    "static/media/woman_photo.74e42860.png": "/AvenueFashion/static/media/woman_photo.74e42860.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7614d966.js",
+    "static/css/2.8879f817.chunk.css",
+    "static/js/2.4119e87b.chunk.js",
+    "static/css/main.0ea00328.chunk.css",
+    "static/js/main.1b3dcb85.chunk.js"
+  ]
+}
