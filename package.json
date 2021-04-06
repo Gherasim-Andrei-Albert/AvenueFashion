@@ -48,5 +48,6 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.7"
-  }
+  },
+  "homepage": "https://Gherasim-Andrei-Albert.github.io/AvenueFashion"
 }
