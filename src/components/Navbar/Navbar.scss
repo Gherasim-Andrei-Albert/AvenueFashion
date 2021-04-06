@@ -3,13 +3,17 @@
 .Navbar {
   position: relative;
   background-color: white;
-  padding: 0 20px;
 }
 
 .Navbar__header_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
+}
+
+.menu__container {
+  padding: 0 20px;
 }
 
 .header {
@@ -134,7 +138,6 @@
 
 @media (min-width: 768px) {
   .Navbar {
-    padding: 0;
     width: 690px;
     margin: auto;
     display: flex;
@@ -161,10 +164,12 @@
     width: auto;
     margin: 0;
     justify-content: space-between;
+    padding: 0;
   }
   .Navbar__header_container {
     width: auto;
     margin: 0;
+    padding: 0;
   }
   .Navbar__bars_icon.fas {
     display: none;
