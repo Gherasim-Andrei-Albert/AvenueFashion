@@ -1,6 +1,9 @@
 @import '../../colors.scss';
 
 .FooterDropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &:not(:last-child) {
     margin-bottom: 15px;
   }
@@ -49,12 +52,6 @@
 }
 
 @media (min-width: 576px) {
-  .FooterDropdown {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .FooterDropdown__caret.fas {
     display: none;
   }
