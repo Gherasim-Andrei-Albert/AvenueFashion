@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Avenue Fashion
+
+Fully responsive project implemented for the psd design found [here](https://freebiesbug.com/psd-freebies/avenue-fashion-psd-ecommerce-template/).
+
+![alt text](https://cdn.freebiesbug.com/wp-content/uploads/2016/12/ave-ecommerce-website-template-psd-580x435.png)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
