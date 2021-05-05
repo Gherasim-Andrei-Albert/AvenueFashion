@@ -166,6 +166,7 @@ const ProductsSection: React.FC = () => {
           afterChange={() => {
             setWasDragging(false);
           }}
+          minimumTouchDrag={0}
           infinite
           autoPlay={!hover}
           showDots={false}

@@ -18,6 +18,7 @@ const HeaderCarousel: React.FC = () => (
       infinite
       autoPlay={true}
       arrows={false}
+      minimumTouchDrag={0}
     >
       {Array.from(Array(3).keys()).map((i) => (
         <div className="HeaderCarousel__slide">
