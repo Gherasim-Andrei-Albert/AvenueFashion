@@ -163,6 +163,9 @@ const ProductsSection: React.FC = () => {
                 setCurrentProductIndex(realSlideIndex);
             }
           }}
+          afterChange={() => {
+            setWasDragging(false);
+          }}
           infinite
           autoPlay={!hover}
           showDots={false}
