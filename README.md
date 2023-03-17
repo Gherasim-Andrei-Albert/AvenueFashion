@@ -2,7 +2,7 @@
 
 Fully responsive project implemented for the psd design found [here](https://freebiesbug.com/psd-freebies/avenue-fashion-psd-ecommerce-template/).
 
-![alt text](https://cdn.freebiesbug.com/wp-content/uploads/2016/12/ave-ecommerce-website-template-psd-580x435.png)
+![alt text](https://freebiesbug.com/wp-content/uploads/2016/12/ave-ecommerce-website-template-psd.png)
 
 ## Getting Started with Create React App
 
